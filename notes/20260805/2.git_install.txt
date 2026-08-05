@@ -1,0 +1,224 @@
+## Centos
+
+```bash
+tim@localhost:~$ sudo dnf install -y git
+[sudo] password for tim: 
+Last metadata expiration check: 0:54:56 ago on Wed 05 Aug 2026 07:58:58 PM CST.
+Dependencies resolved.
+======================================================================================================================================
+ Package                            Architecture             Version                                Repository                   Size
+======================================================================================================================================
+Installing:
+ git                                x86_64                   2.52.0-1.el10                          appstream                    40 k
+Installing dependencies:
+ git-core-doc                       noarch                   2.52.0-1.el10                          appstream                   3.2 M
+ perl-Error                         noarch                   1:0.17029-18.el10                      appstream                    42 k
+ perl-Git                           noarch                   2.52.0-1.el10                          appstream                    37 k
+ perl-TermReadKey                   x86_64                   2.38-24.el10                           appstream                    37 k
+ perl-lib                           x86_64                   0.65-514.el10                          appstream                    16 k
+
+Transaction Summary
+======================================================================================================================================
+Install  6 Packages
+
+Total download size: 3.4 M
+Installed size: 16 M
+Downloading Packages:
+(1/6): git-2.52.0-1.el10.x86_64.rpm                                                                    92 kB/s |  40 kB     00:00    
+(2/6): perl-Error-0.17029-18.el10.noarch.rpm                                                           87 kB/s |  42 kB     00:00    
+(3/6): perl-Git-2.52.0-1.el10.noarch.rpm                                                              460 kB/s |  37 kB     00:00    
+(4/6): perl-TermReadKey-2.38-24.el10.x86_64.rpm                                                       419 kB/s |  37 kB     00:00    
+(5/6): perl-lib-0.65-514.el10.x86_64.rpm                                                              226 kB/s |  16 kB     00:00    
+(6/6): git-core-doc-2.52.0-1.el10.noarch.rpm                                                          2.8 MB/s | 3.2 MB     00:01    
+--------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                 1.5 MB/s | 3.4 MB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                              1/1 
+  Installing       : perl-lib-0.65-514.el10.x86_64                                                                                1/6 
+  Installing       : perl-TermReadKey-2.38-24.el10.x86_64                                                                         2/6 
+  Installing       : perl-Error-1:0.17029-18.el10.noarch                                                                          3/6 
+  Installing       : git-core-doc-2.52.0-1.el10.noarch                                                                            4/6 
+  Installing       : perl-Git-2.52.0-1.el10.noarch                                                                                5/6 
+  Installing       : git-2.52.0-1.el10.x86_64                                                                                     6/6 
+  Running scriptlet: git-2.52.0-1.el10.x86_64                                                                                     6/6 
+
+Installed:
+  git-2.52.0-1.el10.x86_64                git-core-doc-2.52.0-1.el10.noarch              perl-Error-1:0.17029-18.el10.noarch          
+  perl-Git-2.52.0-1.el10.noarch           perl-TermReadKey-2.38-24.el10.x86_64           perl-lib-0.65-514.el10.x86_64                
+
+Complete!
+tim@localhost:~$ git --version
+git version 2.52.0
+tim@localhost:~$ git config --global user.name "TimXuan1027"
+tim@localhost:~$ git config --global user.email "chalres19911027@gmail.com"
+tim@localhost:~$ git config --list
+user.name=TimXuan1027
+user.email=chalres19911027@gmail.com
+tim@localhost:~$ ssh-keygen -t 
+dsa         ecdsa       ecdsa-sk    ed25519     ed25519-sk  rsa         
+tim@localhost:~$ ssh-keygen -t ed25519 -C "charles19911027@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/tim/.ssh/id_ed25519): ^C
+
+tim@localhost:~$ git clone https://github.com/TimXuan1027/prac_git.git
+Cloning into 'prac_git'...
+remote: Enumerating objects: 51, done.
+remote: Counting objects: 100% (51/51), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 51 (delta 20), reused 44 (delta 13), pack-reused 0 (from 0)
+Receiving objects: 100% (51/51), 5.04 KiB | 2.52 MiB/s, done.
+Resolving deltas: 100% (20/20), done.
+tim@localhost:~$ ll
+total 0
+drwxr-xr-x. 3 tim tim  58 Aug  5 20:53 notes
+drwxr-xr-x. 5 tim tim 127 Aug  5 21:01 prac_git
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 下載
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 公共
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 圖片
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 影片
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 文件
+drwxr-xr-x. 2 tim tim  19 Jul 29  2025 桌面
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 模板
+drwxr-xr-x. 2 tim tim   6 Jul 29  2025 音樂
+tim@localhost:~$ vim prac_git/
+tim@localhost:~$ pwd
+/home/tim
+tim@localhost:~$ cd prac_git/
+tim@localhost:~/prac_git$ ll
+total 16
+-rw-r--r--. 1 tim tim  98 Aug  5 21:01 demo_git.txt
+drwxr-xr-x. 2 tim tim   6 Aug  5 21:01 hello
+-rw-r--r--. 1 tim tim  91 Aug  5 21:01 neil_branch.txt
+drwxr-xr-x. 2 tim tim   6 Aug  5 21:01 prac_git
+-rw-r--r--. 1 tim tim  11 Aug  5 21:01 README.md
+-rw-r--r--. 1 tim tim 133 Aug  5 21:01 tim_prac.txt
+tim@localhost:~/prac_git$ tree
+.
+├── demo_git.txt
+├── hello
+├── neil_branch.txt
+├── prac_git
+├── README.md
+└── tim_prac.txt
+
+3 directories, 4 files
+tim@localhost:~/prac_git$ cp -r ~/notes .
+tim@localhost:~/prac_git$ ll
+total 16
+-rw-r--r--. 1 tim tim  98 Aug  5 21:01 demo_git.txt
+drwxr-xr-x. 2 tim tim   6 Aug  5 21:01 hello
+-rw-r--r--. 1 tim tim  91 Aug  5 21:01 neil_branch.txt
+drwxr-xr-x. 3 tim tim  58 Aug  5 21:06 notes
+drwxr-xr-x. 2 tim tim   6 Aug  5 21:01 prac_git
+-rw-r--r--. 1 tim tim  11 Aug  5 21:01 README.md
+-rw-r--r--. 1 tim tim 133 Aug  5 21:01 tim_prac.txt
+tim@localhost:~/prac_git$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	notes/
+
+nothing added to commit but untracked files present (use "git add" to track)
+tim@localhost:~/prac_git$ git add notes/
+tim@localhost:~/prac_git$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   notes/20260805/1.ansible_install.md
+	new file:   notes/20260805/1.ansible_install.txt
+	new file:   notes/Install_Git_Push_command.log
+
+tim@localhost:~/prac_git$ git commit -m "Add Ansible installation notes"
+[master 5935173] Add Ansible installation notes
+ 3 files changed, 297 insertions(+)
+ create mode 100644 notes/20260805/1.ansible_install.md
+ create mode 100644 notes/20260805/1.ansible_install.txt
+ create mode 100644 notes/Install_Git_Push_command.log
+tim@localhost:~/prac_git$ git push origin master 
+Username for 'https://github.com': TimXuan1027
+Password for 'https://TimXuan1027@github.com': 
+tim@localhost:~/prac_git$ cd 
+tim@localhost:~$ ssh-keygen -t ed25519 -C "charles19911027@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/tim/.ssh/id_ed25519): 
+Enter passphrase for "/home/tim/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/tim/.ssh/id_ed25519
+Your public key has been saved in /home/tim/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:ja+uI9V8UNbCPLmfFJ3iWEqfAiMq/DA6HYZQ7v8VDPw charles19911027@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+| ..      o o . . |
+|..   .. o X = o  |
+|.o.  .o. * X +   |
+|..B .  +.o= =    |
+| +.*   oE..+ .   |
+|o ... . oo. o    |
+| .  ..  ...      |
+|    .... .       |
+|     .o+o        |
++----[SHA256]-----+
+tim@localhost:~$ ssh-keygen -t ed25519 -C "charles19911027@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/tim/.ssh/id_ed25519): MyLinux2026!
+Enter passphrase for "MyLinux2026!" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in MyLinux2026!
+Your public key has been saved in MyLinux2026!.pub
+The key fingerprint is:
+SHA256:+NdnhR7EGhK03KYGZYRxe4IPjU3q/1ryEVDRkAaI+OY charles19911027@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|     . ..*X.+=   |
+|    . . o% *o..  |
+|     .  * X.= o  |
+|      oo + B + . |
+|     o. S + o o .|
+|      E. o . o o |
+|        . + + +  |
+|         . = +   |
+|          ..o    |
++----[SHA256]-----+
+tim@localhost:~$ cat ~/.ssh/id_ed25519.pub 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMsBsqU3wwazKYcCd3qApLUQma9JLO98+j2ulukf+/oL charles19911027@gmail.com
+tim@localhost:~$ cd prac_git/
+tim@localhost:~/prac_git$ git remote -v
+origin	https://github.com/TimXuan1027/prac_git.git (fetch)
+origin	https://github.com/TimXuan1027/prac_git.git (push)
+tim@localhost:~/prac_git$ git remote set-url origin git@github.com:TimXuan1027/prac_git.git
+tim@localhost:~/prac_git$ git remote -v
+origin	git@github.com:TimXuan1027/prac_git.git (fetch)
+origin	git@github.com:TimXuan1027/prac_git.git (push)
+tim@localhost:~/prac_git$ ssh -T git@github.com
+The authenticity of host 'github.com (20.27.177.113)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi TimXuan1027! You'v^[[I^[[2;2R^[[3;1R^[[>61;7801;1c^[]10;rgb:cfcf/cfcf/cfcf^G^[]11;rgb:1e1e/1e1e/1e1e^Ge successfully authenticated, but GitHub does not provide shell access.
+tim@localhost:~/prac_git$ git push origin master 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 7.25 KiB | 7.25 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:TimXuan1027/prac_git.git
+   d1839a0..5935173  master -> master
+tim@localhost:~/prac_git$ cd
+tim@localhost:~$ exit
+exit
+
+Script done on 2026-08-05 21:28:35+08:00 [COMMAND_EXIT_CODE="0"]
+
+```
