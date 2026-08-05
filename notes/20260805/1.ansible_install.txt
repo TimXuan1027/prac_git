@@ -1,0 +1,109 @@
+tim@localhost:~$ sudo dnf install -y epel-release 
+[sudo] password for tim: 
+CentOS Stream 10 - BaseOS                       5.4 kB/s | 5.0 kB     00:00    
+CentOS Stream 10 - BaseOS                       4.1 MB/s | 7.0 MB     00:01    
+CentOS Stream 10 - AppStream                     19 kB/s | 5.1 kB     00:00    
+CentOS Stream 10 - AppStream                    2.2 MB/s | 3.7 MB     00:01    
+CentOS Stream 10 - Extras packages              6.3 kB/s | 5.4 kB     00:00    
+CentOS Stream 10 - Extras packages               14 kB/s |  11 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package             Architecture  Version           Repository            Size
+================================================================================
+Installing:
+ epel-release        noarch        10-5.el10s        extras-common         18 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 18 k
+Installed size: 25 k
+Downloading Packages:
+epel-release-10-5.el10s.noarch.rpm               81 kB/s |  18 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                            28 kB/s |  18 kB     00:00     
+CentOS Stream 10 - Extras packages              2.1 MB/s | 2.1 kB     00:00    
+Importing GPG key 0x1D997668:
+ Userid     : "CentOS Extras SIG (https://wiki.centos.org/SpecialInterestGroup) <security@centos.org>"
+ Fingerprint: 363F C097 2F64 B699 AED3 968E 1FF6 A217 1D99 7668
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Extras-SHA512
+warning: Certificate 1FF6A2171D997668:
+  Policy rejects subkey 8B5C8111FCA5D0FF: Policy rejected non-revocation signature (PrimaryKeyBinding) requiring second pre-image resistance
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : epel-release-10-5.el10s.noarch                         1/1 
+  Running scriptlet: epel-release-10-5.el10s.noarch                         1/1 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+
+Installed:
+  epel-release-10-5.el10s.noarch                                                
+
+Complete!
+
+tim@localhost:~$ sudo dnf install -y ansible-core
+Extra Packages for Enterprise Linux 10 - x86_64                                                                                                                                                              3.3 MB/s | 7.0 MB     00:02    
+Last metadata expiration check: 0:00:03 ago on Wed 05 Aug 2026 07:46:18 PM CST.
+Dependencies resolved.
+=============================================================================================================================================================================================================================================
+ Package                                                         Architecture                                      Version                                                        Repository                                            Size
+=============================================================================================================================================================================================================================================
+Installing:
+ ansible-core                                                    noarch                                            1:2.16.19-2.el10                                               appstream                                            2.9 M
+Installing dependencies:
+ git-core                                                        x86_64                                            2.52.0-1.el10                                                  appstream                                            5.1 M
+ python3-cffi                                                    x86_64                                            1.16.0-7.el10                                                  baseos                                               308 k
+ python3-cryptography                                            x86_64                                            43.0.0-4.el10                                                  baseos                                               1.4 M
+ python3-jinja2                                                  noarch                                            3.1.6-1.el10                                                   appstream                                            327 k
+ python3-markupsafe                                              x86_64                                            2.1.3-6.el10                                                   appstream                                             32 k
+ python3-ply                                                     noarch                                            3.11-25.el10                                                   baseos                                               134 k
+ python3-pycparser                                               noarch                                            2.20-16.el10                                                   baseos                                               158 k
+ python3-resolvelib                                              noarch                                            1.0.1-6.el10                                                   appstream                                             45 k
+
+Transaction Summary
+=============================================================================================================================================================================================================================================
+Install  9 Packages
+
+Total download size: 10 M
+Installed size: 44 M
+Downloading Packages:
+(1/9): python3-ply-3.11-25.el10.noarch.rpm                                                                                                                                                                   366 kB/s | 134 kB     00:00    
+(2/9): python3-cffi-1.16.0-7.el10.x86_64.rpm                                                                                                                                                                 745 kB/s | 308 kB     00:00    
+(3/9): python3-pycparser-2.20-16.el10.noarch.rpm                                                                                                                                                             1.5 MB/s | 158 kB     00:00    
+(4/9): python3-cryptography-43.0.0-4.el10.x86_64.rpm                                                                                                                                                         2.6 MB/s | 1.4 MB     00:00    
+(5/9): python3-jinja2-3.1.6-1.el10.noarch.rpm                                                                                                                                                                4.7 MB/s | 327 kB     00:00    
+(6/9): python3-markupsafe-2.1.3-6.el10.x86_64.rpm                                                                                                                                                            513 kB/s |  32 kB     00:00    
+(7/9): ansible-core-2.16.19-2.el10.noarch.rpm                                                                                                                                                                8.4 MB/s | 2.9 MB     00:00    
+(8/9): python3-resolvelib-1.0.1-6.el10.noarch.rpm                                                                                                                                                            517 kB/s |  45 kB     00:00    
+(9/9): git-core-2.52.0-1.el10.x86_64.rpm                                                                                                                                                                      10 MB/s | 5.1 MB     00:00    
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                        4.0 MB/s |  10 MB     00:02     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                                                                     1/1 
+  Installing       : python3-resolvelib-1.0.1-6.el10.noarch                                                                                                                                                                              1/9 
+  Installing       : python3-markupsafe-2.1.3-6.el10.x86_64                                                                                                                                                                              2/9 
+  Installing       : python3-jinja2-3.1.6-1.el10.noarch                                                                                                                                                                                  3/9 
+  Installing       : git-core-2.52.0-1.el10.x86_64                                                                                                                                                                                       4/9 
+  Installing       : python3-ply-3.11-25.el10.noarch                                                                                                                                                                                     5/9 
+  Installing       : python3-pycparser-2.20-16.el10.noarch                                                                                                                                                                               6/9 
+  Installing       : python3-cffi-1.16.0-7.el10.x86_64                                                                                                                                                                                   7/9 
+  Installing       : python3-cryptography-43.0.0-4.el10.x86_64                                                                                                                                                                           8/9 
+  Installing       : ansible-core-1:2.16.19-2.el10.noarch                                                                                                                                                                                9/9 
+  Running scriptlet: ansible-core-1:2.16.19-2.el10.noarch                                                                                                                                                                                9/9 
+
+Installed:
+  ansible-core-1:2.16.19-2.el10.noarch  git-core-2.52.0-1.el10.x86_64          python3-cffi-1.16.0-7.el10.x86_64       python3-cryptography-43.0.0-4.el10.x86_64  python3-jinja2-3.1.6-1.el10.noarch  python3-markupsafe-2.1.3-6.el10.x86_64 
+  python3-ply-3.11-25.el10.noarch       python3-pycparser-2.20-16.el10.noarch  python3-resolvelib-1.0.1-6.el10.noarch 
+
+Complete!
