@@ -1,0 +1,207 @@
+Script started on 2026-08-08 00:07:31+08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="134" LINES="25"]
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim nginx_[K[K[K[K[K[K[K[K[K[Kll
+[?2004l]133;C\]666;vte.shell.preexec!\total 76
+-rw-r--r--. 1 tim tim 66545 Aug  8 00:06 Install_Nginx.log
+-rwxr-xr-x. 1 tim tim   321 Aug  8 00:06 [0m[01;32mnginx_install.sh[0m
+-rwxr-xr-x. 1 tim tim   265 Aug  7 23:28 [01;32mnginx_remove.sh[0m
+-rw-r--r--. 1 tim tim     0 Aug  8 00:07 Remove_Nginx.log
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vo[Kim nginx_remove.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_remove.sh" 18L, 265B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[K[4;1H[34m# Stop Nginx[m
+sudo systemctl [38;5;130mstop[m nginx
+
+[34m# Disable Nginx[m
+sudo systemctl disable nginx
+
+[34m# Remove Nginx[m
+sudo dnf remove [35m-y[m nginx
+
+[34m# Disable Firewalld[m
+sudo firewalld-cmd [35m--permanent[m [35m--remove-service[m[38;5;130m=[mhttp
+sudo firewalld-cmd [35m--reload[m
+
+[34m# Check [m
+[38;5;130mrpm[m [35m-q[m nginx
+[94m~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H18,12[9CAll[18;12H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[25;107H:[18;12H[25;108H1[18;12H[25;109He[18;12H[25;110H1[18;12H[25;111He[18;12H[25;112H/[18;12H[25;113H1[18;12H[25;114He[18;12H[25;115H1[18;12H[25;116He[18;12H[25;107H          [18;12H[27m[23m[29m[m[H[2J[1;1H[96m#!/bin/bash
+
+
+# Stop Nginx[m
+sudo systemctl [93mstop[m nginx
+
+[96m# Disable Nginx[m
+sudo systemctl disable nginx
+
+[96m# Remove Nginx[m
+sudo dnf remove [38;5;224m-y[m nginx
+
+[96m# Disable Firewalld[m
+sudo firewalld-cmd [38;5;224m--permanent[m [38;5;224m--remove-service[m[93m=[mhttp
+sudo firewalld-cmd [38;5;224m--reload[m
+
+[96m# Check [m
+[93mrpm[m [38;5;224m-q[m nginx
+[94m~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H18,12[9CAll"nginx_remove.sh" 18L, 265B[18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [18;12H[25;1H[1m-- INSERT --[m[25;13H[K[25;117H18,12[9CAll[18;12H[?25h[?25l[25;121H3[18;13H[?25h[?25l[19;1H[K[25;118H9,1 [19;1H[?25h[?25lf[25;120H2[19;2H[?25h[?25l[97m[101mfi[m[25;120H3[19;3H[?25h[?25lf[19;2H[K[25;120H2[19;2H[?25h[?25l[19;1H[K[25;120H1[19;1H[?25h[?25ls[25;120H2[19;2H[?25h[?25lu[25;120H3[19;3H[?25h[?25ld[25;120H4[19;4H[?25h[?25lo[25;120H5[19;5H[?25h[?25l[25;120H6[19;6H[?25h[?25lf[25;120H7[19;7H[?25h[?25l[97m[101mfi[m[25;120H8[19;8H[?25h[?25lfir[25;120H9[19;9H[?25h[?25le[25;120H10[19;10H[?25h[?25lw[25;121H1[19;11H[?25h[?25la[25;121H2[19;12H[?25h[?25ll[25;121H3[19;13H[?25h[?25ll[25;121H4[19;14H[?25h[?25l-[25;121H5[19;15H[?25h[?25lc[25;121H6[19;16H[?25h[?25lm[25;121H7[19;17H[?25h[?25ld[25;121H8[19;18H[?25h[?25l[25;121H9[19;19H[?25h[?25l-[25;120H20[19;20H[?25h[?25l[38;5;224m--[m[25;121H1[19;21H[?25h[?25l[38;5;224ml[m[25;121H2[19;22H[?25h[?25l[38;5;224mi[m[25;121H3[19;23H[?25h[?25l[38;5;224ms[m[25;121H4[19;24H[?25h[?25l[38;5;224mt[m[25;121H5[19;25H[?25h[?25l[38;5;224m-[m[25;121H6[19;26H[?25h[?25l[38;5;224ma[m[25;121H7[19;27H[?25h[?25l[38;5;224ml[m[25;121H8[19;28H[?25h[?25l[38;5;224ml[m[25;121H9[19;29H[?25h[25;1H[K[19;28H[?25l[25;107H^[[19;28H[25;107H  [19;29H[25;117H19,28[9CAll[19;28H[?25h[?25l[25;107H:[19;28H[25;107H[K[25;1H:[?25hwq[?25l[?2004l[>4;m"nginx_remove.sh" 19L, 294B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\./nginx_re[Kem[K[K[K[K[K[K[K[K[K[K[Kcat nginx_remove.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\#!/bin/bash
+
+
+# Stop Nginx
+sudo systemctl stop nginx
+
+# Disable Nginx
+sudo systemctl disable nginx
+
+# Remove Nginx
+sudo dnf remove -y nginx
+
+# Disable Firewalld
+sudo firewalld-cmd --permanent --remove-service=http
+sudo firewalld-cmd --reload
+
+# Check 
+rpm -q nginx
+sudo firewall-cmd --list-all
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\./nn[Kginx_remove.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[sudo] password for tim: 
+Removed '/etc/systemd/system/multi-user.target.wants/nginx.service'.
+Dependencies resolved.
+======================================================================================================================================
+ Package                              Architecture             Version                             Repository                    Size
+======================================================================================================================================
+Removing:
+ [31mnginx                               (B[m x86_64                   2:1.26.3-12.el10                    @appstream                   119 k
+Removing unused dependencies:
+ [31mcentos-logos-httpd                  (B[m noarch                   100.5-1.el10                        @appstream                   1.4 M
+ [31mnginx-core                          (B[m x86_64                   2:1.26.3-12.el10                    @appstream                   1.8 M
+ [31mnginx-filesystem                    (B[m noarch                   2:1.26.3-12.el10                    @appstream                   141  
+
+Transaction Summary
+======================================================================================================================================
+Remove  4 Packages
+
+Freed space: 3.2 M
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :  [==========================                                                                               ] 1/1  Preparing        :  [====================================================                                                     ] 1/1  Preparing        :  [==============================================================================                           ] 1/1  Preparing        :                                                                                                              1/1 
+  Running scriptlet: nginx-2:1.26.3-12.el10.x86_64                                                                                1/4 
+  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [                                                                            ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [===                                                                         ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [========                                                                    ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [============                                                                ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [=================                                                           ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [======================                                                      ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [==========================                                                  ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [===============================                                             ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [===================================                                         ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [=======================================                                     ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [============================================                                ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [================================================                            ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [=====================================================                       ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [=========================================================                   ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [==============================================================              ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [==================================================================          ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64 [=======================================================================     ] 1/4  Erasing          : nginx-2:1.26.3-12.el10.x86_64                                                                                1/4 
+  Running scriptlet: nginx-2:1.26.3-12.el10.x86_64                                                                                1/4 
+  Erasing          : centos-logos-httpd-100.5-1.el10.noarch [                                                                   ] 2/4  Erasing          : centos-logos-httpd-100.5-1.el10.noarch [=============                                                      ] 2/4  Erasing          : centos-logos-httpd-100.5-1.el10.noarch [==========================                                         ] 2/4  Erasing          : centos-logos-httpd-100.5-1.el10.noarch [========================================                           ] 2/4  Erasing          : centos-logos-httpd-100.5-1.el10.noarch [=====================================================              ] 2/4  Erasing          : centos-logos-httpd-100.5-1.el10.noarch                                                                       2/4 
+  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [                                                                       ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [=                                                                      ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [===                                                                    ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [=====                                                                  ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [=======                                                                ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [=========                                                              ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [============                                                           ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==============                                                         ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [===============                                                        ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [=================                                                      ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [===================                                                    ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [======================                                                 ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [========================                                               ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==========================                                             ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [============================                                           ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [=============================                                          ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [===============================                                        ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==================================                                     ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [========================================                               ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==========================================                             ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [============================================                           ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==============================================                         ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [================================================                       ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==================================================                     ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [====================================================                   ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [======================================================                 ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [========================================================               ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==========================================================             ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [============================================================           ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==============================================================         ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [================================================================       ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [==================================================================     ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64 [====================================================================   ] 3/4  Erasing          : nginx-core-2:1.26.3-12.el10.x86_64                                                                           3/4 
+  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [                                                                 ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [=======                                                          ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [================                                                 ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [========================                                         ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [================================                                 ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [========================================                         ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [================================================                 ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch [========================================================         ] 4/4  Erasing          : nginx-filesystem-2:1.26.3-12.el10.noarch                                                                     4/4 
+  Running scriptlet: nginx-filesystem-2:1.26.3-12.el10.noarch                                                                     4/4 
+
+Removed:
+  centos-logos-httpd-100.5-1.el10.noarch            nginx-2:1.26.3-12.el10.x86_64          nginx-core-2:1.26.3-12.el10.x86_64         
+  nginx-filesystem-2:1.26.3-12.el10.noarch         
+
+Complete!
+sudo: firewalld-cmd: command not found
+sudo: firewalld-cmd: command not found
+package nginx is not installed
+public (default, active)
+  target: default
+  ingress-priority: 0
+  egress-priority: 0
+  icmp-block-inversion: no
+  interfaces: ens33
+  sources: 
+  services: cockpit dhcpv6-client http ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\./nginx_remove.sh [2@cat [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K./nginx_remove.sh [2@cat [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K./nginx_remove.sh [2@cat [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cll[Kvim nginx_remove.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_remove.sh" 19L, 294B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[K[4;1H[34m# Stop Nginx[m
+sudo systemctl [38;5;130mstop[m nginx
+
+[34m# Disable Nginx[m
+sudo systemctl disable nginx
+
+[34m# Remove Nginx[m
+sudo dnf remove [35m-y[m nginx
+
+[34m# Disable Firewalld[m
+sudo firewalld-cmd [35m--permanent[m [35m--remove-service[m[38;5;130m=[mhttp
+sudo firewalld-cmd [35m--reload[m
+
+[34m# Check [m
+[38;5;130mrpm[m [35m-q[m nginx
+sudo firewall-cmd [35m--list-all[m
+[94m~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H19,28[9CAll[19;28H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[27m[23m[29m[m[H[2J[?25l[1;1H[96m#!/bin/bash
+
+
+# Stop Nginx[m
+sudo systemctl [93mstop[m nginx
+
+[96m# Disable Nginx[m
+sudo systemctl disable nginx
+
+[96m# Remove Nginx[m
+sudo dnf remove [38;5;224m-y[m nginx
+
+[96m# Disable Firewalld[m
+sudo firewalld-cmd [38;5;224m--permanent[m [38;5;224m--remove-service[m[93m=[mhttp
+sudo firewalld-cmd [38;5;224m--reload[m
+
+[96m# Check [m
+[93mrpm[m [38;5;224m-q[m nginx
+sudo firewall-cmd [38;5;224m--list-all[m
+[94m~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H19,28[9CAll"nginx_remove.sh" 19L, 294B[19;28H[?25h[?25l[25;107H~@k[19;28H[25;107H   [18;12H[25;118H8,12[18;12H[?25h[?25l[25;107H~@k[18;12H[25;107H   [17;8H[25;118H7,8 [17;8H[?25h[?25l[25;107H~@k[17;8H[25;107H   [16;1H[25;118H6,0-1[16;1H[?25h[?25l[25;107H~@k[16;1H[25;107H   [15;12H[25;118H5,12 [15;12H[?25h[?25l[25;107H~@k[15;12H[25;107H   [14;12H[25;118H4[14;12H[?25h[?25l[25;107H~@k[14;12H[25;107H   [13;12H[25;118H3[13;12H[?25h[?25l[25;107H~@k[13;12H[25;107H   [12;1H[25;118H2,0-1[12;1H[?25h[?25l[25;107H~@k[12;1H[25;107H   [11;12H[25;118H1,12 [11;12H[?25h[?25l[25;107H~@k[11;12H[25;107H   [10;12H[25;118H0[10;12H[?25h[?25l[25;107H~@k[10;12H[25;107H   [9;1H[25;117H9,0-1[9;1H[?25h[?25l[25;107H~@k[9;1H[25;107H   [10;12H[25;117H10,12[10;12H[?25h[?25l[25;107H~@k[10;12H[25;107H   [11;12H[25;118H1[11;12H[?25h[?25l[25;107H~@k[11;12H[25;107H   [12;1H[25;118H2,0-1[12;1H[?25h[?25l[25;107H~@k[12;1H[25;107H   [13;12H[25;118H3,12 [13;12H[?25h[?25l[25;107H~@k[13;12H[25;107H   [14;12H[25;118H4[14;12H[?25h[?25l[25;107H~@k[14;12H[25;107H   [14;13H[25;121H3[14;13H[?25h[?25l[25;107H~@k[14;13H[25;107H   [14;14H[25;121H4[14;14H[?25h[?25l[25;107H~@k[14;14H[25;107H   [14;15H[25;121H5[14;15H[?25h[?25l[25;107H~@k[14;15H[25;107H   [14;15H[25;1H[1m-- INSERT --[m[25;13H[K[25;117H14,15[9CAll[14;15H[?25h[?25l-cmd [38;5;224m--permanent[m [38;5;224m--remove-service[m[93m=[mhttp[14;52H[K[25;121H4[14;14H[?25h[?25l[25;118H5[15;14H[?25h[?25l[25;118H6,1 [16;1H[?25h[?25l[25;118H5,14[15;14H[?25h[?25l[25;121H5[15;15H[?25h[?25l-cmd [38;5;224m--reload[m[15;27H[K[25;121H4[15;14H[?25h[25;1H[K[15;13H[?25l[25;107H^[[15;13H[25;107H  [15;14H[25;117H15,13[9CAll[15;13H[?25h[?25l[25;107H:[15;13H[25;107H[K[25;1H:[?25hwq[?25l[?2004l[>4;m"nginx_remove.sh" 19L, 292B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\cat nginx_remove.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\#!/bin/bash
+
+
+# Stop Nginx
+sudo systemctl stop nginx
+
+# Disable Nginx
+sudo systemctl disable nginx
+
+# Remove Nginx
+sudo dnf remove -y nginx
+
+# Disable Firewalld
+sudo firewall-cmd --permanent --remove-service=http
+sudo firewall-cmd --reload
+
+# Check 
+rpm -q nginx
+sudo firewall-cmd --list-all
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\cat nginx_remove.sh vim[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l]133;C\]666;vte.shell.preexec!\[0;1;31mFailed to stop nginx.service: Unit nginx.service not loaded.[0m
+[0;1;31mFailed to disable unit: Unit nginx.service does not exist[0m
+No match for argument: [1mnginx(B[m
+No packages marked for removal.
+Dependencies resolved.
+Nothing to do.
+Complete!
+success
+success
+package nginx is not installed
+public (default, active)
+  target: default
+  ingress-priority: 0
+  egress-priority: 0
+  icmp-block-inversion: no
+  interfaces: ens33
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\exit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-08-08 00:09:24+08:00 [COMMAND_EXIT_CODE="0"]

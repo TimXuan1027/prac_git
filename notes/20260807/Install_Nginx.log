@@ -1,0 +1,455 @@
+Script started on 2026-08-07 23:33:13+08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="134" LINES="25"]
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vi[K[Kmkdir -p [K[K[K[K[K[K[K[K[Kvim [K[K[K[Kkk[K[Kll
+[?2004l]133;C\]666;vte.shell.preexec!\total 8
+-rw-r--r--. 1 tim tim   0 Aug  7 23:33 Install_Nginx.log
+-rwxr-xr-x. 1 tim tim 267 Aug  7 23:08 [0m[01;32mnginx_install.sh[0m
+-rwxr-xr-x. 1 tim tim 265 Aug  7 23:28 [01;32mnginx_remove.sh[0m
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim nginx_install.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_install.sh" 16L, 267B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[34m# Install Nginx[m[3;16H[K[4;1Hsudo dnf install [35m-y[m nginx
+
+[34m# Start and Enable Nginx[m
+sudo systemctl [38;5;130menable[m [35m--now[m nginx
+
+[34m# Enable Firewalld[m
+sudo firewalld-cmd [35m--permanent[m [35m--add-service[m[38;5;130m=[mhttp
+
+[34m# Check Ngiinx status[m
+systemctl [38;5;130mstatus[m nginx [35m--no-pager[m
+systemctl [38;5;130mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H16,0-1[8CAll[16;1H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[27m[23m[29m[m[H[2J[?25l[1;1H[96m#!/bin/bash
+
+# Install Nginx[m
+sudo dnf install [38;5;224m-y[m nginx
+
+[96m# Start and Enable Nginx[m
+sudo systemctl [93menable[m [38;5;224m--now[m nginx
+
+[96m# Enable Firewalld[m
+sudo firewalld-cmd [38;5;224m--permanent[m [38;5;224m--add-service[m[93m=[mhttp
+
+[96m# Check Ngiinx status[m
+systemctl [93mstatus[m nginx [38;5;224m--no-pager[m
+systemctl [93mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H16,0-1[8CAll"nginx_install.sh" 16L, 267B[16;1H[?25h[?25l[25;107H^[[16;1H[25;107H  [16;1H[25;107H^[[16;1H[25;107H  [16;1H[?25h[?25l[25;107HL[16;1H[25;107H [16;1H[?25h[?25l[25;107H:[16;1H[25;1H[K[25;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[25;1H[K[25;1H[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\cat nginx_is[Knstall.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\#!/bin/bash
+
+# Install Nginx
+sudo dnf install -y nginx
+
+# Start and Enable Nginx
+sudo systemctl enable --now nginx
+
+# Enable Firewalld
+sudo firewalld-cmd --permanent --add-service=http
+
+# Check Ngiinx status
+systemctl status nginx --no-pager
+systemctl status nginx
+
+
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\/[K./[K[Kch[K[Kvi[K[K./nginx_install.sh [K
+[?2004l]133;C\]666;vte.shell.preexec!\[sudo] password for tim: 
+Last metadata expiration check: 0:35:06 ago on Fri 07 Aug 2026 10:59:11 PM CST.
+Dependencies resolved.
+======================================================================================================================================
+ Package                              Architecture             Version                              Repository                   Size
+======================================================================================================================================
+Installing:
+ [1m[32mnginx                               (B[m x86_64                   2:1.26.3-12.el10                     appstream                    32 k
+Installing dependencies:
+ [1m[32mcentos-logos-httpd                  (B[m noarch                   100.5-1.el10                         appstream                   854 k
+ [1m[32mnginx-core                          (B[m x86_64                   2:1.26.3-12.el10                     appstream                   661 k
+ [1m[32mnginx-filesystem                    (B[m noarch                   2:1.26.3-12.el10                     appstream                    11 k
+
+Transaction Summary
+======================================================================================================================================
+Install  4 Packages
+
+Total download size: 1.5 M
+Installed size: 3.2 M
+Downloading Packages:
+                                                    [===                                            ] ---  B/s |   0  B     --:-- ETA                                                    [===                                            ] ---  B/s |   0  B     --:-- ETA                                                    [   ===                                         ] ---  B/s |   0  B     --:-- ETA(1/4): centos-logos-httpd-100.5-1.el10.noarch.r  0% [                                               ] ---  B/s |   0  B     --:-- ETA(1-3/4): nginx-1.26.3-12.el10.x86_64.rpm         6% [==-                                            ] 316 kB/s |  95 kB     00:04 ETA(1/4): nginx-1.26.3-12.el10.x86_64.rpm                                                                104 kB/s |  32 kB     00:00    
+(2-3/4): nginx-core-1.26.3-12.el10.x86_64.rpm    7% [===                                            ] 319 kB/s | 111 kB     00:04 ETA(2/4): nginx-filesystem-1.26.3-12.el10.noarch.rpm                                                     182 kB/s |  11 kB     00:00    
+(3-4/4): nginx-core-1.26.3-12.el10.x86_64.rpm   20% [=========                                      ] 355 kB/s | 313 kB     00:03 ETA(3/4): centos-logos-httpd-100.5-1.el10.noarch.rpm                                                     1.4 MB/s | 854 kB     00:00    
+(4/4): nginx-core-1.26.3-12.el10.x86_64.rpm    100% [===============================================] 589 kB/s | 1.5 MB     00:00 ETA(4/4): nginx-core-1.26.3-12.el10.x86_64.rpm                                                           1.1 MB/s | 661 kB     00:00    
+--------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                 978 kB/s | 1.5 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :  [==========================                                                                               ] 1/1  Preparing        :  [====================================================                                                     ] 1/1  Preparing        :  [==============================================================================                           ] 1/1  Preparing        :                                                                                                              1/1 
+  Running scriptlet: nginx-filesystem-2:1.26.3-12.el10.noarch                                                                     1/4 
+  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [                                                                 ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [=====                                                            ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [===========                                                      ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [==================                                               ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [=========================                                        ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [================================                                 ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [==============================================                   ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [====================================================             ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch [==========================================================       ] 1/4  Installing       : nginx-filesystem-2:1.26.3-12.el10.noarch                                                                     1/4 
+  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [                                                                       ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==                                                                     ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===                                                                    ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [====                                                                   ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=====                                                                  ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=======                                                                ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [========                                                               ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=========                                                              ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==========                                                             ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [============                                                           ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=============                                                          ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==============                                                         ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===============                                                        ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=================                                                      ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==================                                                     ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===================                                                    ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [====================                                                   ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [======================                                                 ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=======================                                                ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [========================                                               ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=========================                                              ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==========================                                             ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [============================                                           ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=============================                                          ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==============================                                         ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===============================                                        ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=================================                                      ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==================================                                     ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===================================                                    ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [====================================                                   ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [======================================                                 ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=======================================                                ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=========================================                              ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===========================================                            ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [============================================                           ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==============================================                         ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [================================================                       ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=================================================                      ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===================================================                    ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=====================================================                  ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [======================================================                 ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [========================================================               ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==========================================================             ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [============================================================           ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=============================================================          ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [===============================================================        ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [=================================================================      ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [==================================================================     ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [====================================================================   ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64 [====================================================================== ] 2/4  Installing       : nginx-core-2:1.26.3-12.el10.x86_64                                                                           2/4 
+  Installing       : centos-logos-httpd-100.5-1.el10.noarch [                                                                   ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=                                                                  ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [===                                                                ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [====                                                               ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [======                                                             ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [========                                                           ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=========                                                          ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==========                                                         ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [============                                                       ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==============                                                     ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [===============                                                    ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [================                                                   ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==================                                                 ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [====================                                               ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=====================                                              ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=======================                                            ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [========================                                           ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==========================                                         ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [===========================                                        ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=============================                                      ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==============================                                     ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [================================                                   ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==================================                                 ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [===================================                                ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [====================================                               ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [======================================                             ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [========================================                           ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=========================================                          ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [===========================================                        ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [============================================                       ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==============================================                     ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [===============================================                    ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=================================================                  ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==================================================                 ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [====================================================               ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [======================================================             ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=======================================================            ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [========================================================           ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==========================================================         ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [============================================================       ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [=============================================================      ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [==============================================================     ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [================================================================   ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch [================================================================== ] 3/4  Installing       : centos-logos-httpd-100.5-1.el10.noarch                                                                       3/4 
+  Installing       : nginx-2:1.26.3-12.el10.x86_64 [                                                                            ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [=                                                                           ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [==                                                                          ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [===                                                                         ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [====                                                                        ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [=====                                                                       ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [======                                                                      ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [==========================                                                  ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [==============================================                              ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [==================================================================          ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64 [=========================================================================== ] 4/4  Installing       : nginx-2:1.26.3-12.el10.x86_64                                                                                4/4 
+  Running scriptlet: nginx-2:1.26.3-12.el10.x86_64                                                                                4/4 
+
+Installed:
+  centos-logos-httpd-100.5-1.el10.noarch            nginx-2:1.26.3-12.el10.x86_64          nginx-core-2:1.26.3-12.el10.x86_64         
+  nginx-filesystem-2:1.26.3-12.el10.noarch         
+
+Complete!
+Created symlink '/etc/systemd/system/multi-user.target.wants/nginx.service' → '/usr/lib/systemd/system/nginx.service'.
+sudo: firewalld-cmd: command not found
+[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 58ms ago
+ Invocation: 0700dd8875f244139da91e9cacbac080
+    Process: 10775 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)
+    Process: 10776 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)
+    Process: 10779 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)
+   Main PID: 10780 (nginx)
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m
+     Memory: 3M (peak: 3M)
+        CPU: 57ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m
+
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+[?1h=[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server[m
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)[m]8;;\
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 86ms ago[m
+ Invocation: 0700dd8875f244139da91e9cacbac080[m
+    Process: 10775 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)[m
+    Process: 10776 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)[m
+    Process: 10779 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)[m
+   Main PID: 10780 (nginx)[m
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m[m
+     Memory: 3M (peak: 3M)[m
+        CPU: 57ms[m
+     CGroup: /system.slice/nginx.service[m
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m[m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m[m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m[m
+[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.[m
+[K[?1l>]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\systemctl status nginx.service 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1h=[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server[m
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)[m]8;;\
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 27min ago[m
+ Invocation: 0700dd8875f244139da91e9cacbac080[m
+    Process: 10775 ExecStartPre=/usr/bin/rm -f /run/nginx.pid (code=exited, status=0/SUCCESS)[m
+    Process: 10776 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)[m
+    Process: 10779 ExecStart=/usr/sbin/nginx (code=exited, status=0/SUCCESS)[m
+   Main PID: 10780 (nginx)[m
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m[m
+     Memory: 3M (peak: 3M)[m
+        CPU: 57ms[m
+     CGroup: /system.slice/nginx.service[m
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m[m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m[m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m[m
+[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.[m
+[K[?1l>]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\systemctl status nginx.service --[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo firewall-c[Kcmd --r[Klist-all
+[?2004l]133;C\]666;vte.shell.preexec!\[sudo] password for tim: 
+public (default, active)
+  target: default
+  ingress-priority: 0
+  egress-priority: 0
+  icmp-block-inversion: no
+  interfaces: ens33
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim 
+Install_Nginx.log  nginx_install.sh   nginx_remove.sh    
+]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim 
+Install_Nginx.log  nginx_install.sh   nginx_remove.sh    
+]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim 
+Install_Nginx.log  nginx_install.sh   nginx_remove.sh    
+]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim [K[K[K[Kvim ins[K[K[Knginx_is[Knstall.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_install.sh" 16L, 267B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[34m# Install Nginx[m[3;16H[K[4;1Hsudo dnf install [35m-y[m nginx
+
+[34m# Start and Enable Nginx[m
+sudo systemctl [38;5;130menable[m [35m--now[m nginx
+
+[34m# Enable Firewalld[m
+sudo firewalld-cmd [35m--permanent[m [35m--add-service[m[38;5;130m=[mhttp
+
+[34m# Check Ngiinx status[m
+systemctl [38;5;130mstatus[m nginx [35m--no-pager[m
+systemctl [38;5;130mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H16,0-1[8CAll[16;1H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[25;107He[16;1H[25;108H1[16;1H[25;109He[16;1H[25;110H/[16;1H[25;111H1[16;1H[25;112He[16;1H[25;113H1[16;1H[25;114He[16;1H[25;115H/[16;1H[25;116H1[16;1H[25;107H          [16;1H[27m[23m[29m[m[H[2J[1;1H[96m#!/bin/bash
+
+# Install Nginx[m
+sudo dnf install [38;5;224m-y[m nginx
+
+[96m# Start and Enable Nginx[m
+sudo systemctl [93menable[m [38;5;224m--now[m nginx
+
+[96m# Enable Firewalld[m
+sudo firewalld-cmd [38;5;224m--permanent[m [38;5;224m--add-service[m[93m=[mhttp
+
+[96m# Check Ngiinx status[m
+systemctl [93mstatus[m nginx [38;5;224m--no-pager[m
+systemctl [93mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H16,0-1[8CAll"nginx_install.sh" 16L, 267B[16;1H[?25h[?25l[25;107H^[[16;1H[25;107H  [16;1H[25;107H^[[16;1H[25;107H  [16;1H[?25h[?25l[25;107H:[16;1H[25;1H[K[25;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[25;1H[K[25;1H[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim nginx_install.sh sudo firewall-cmd --list-all[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pvim nginx_install.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_install.sh" 16L, 267B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[34m# Install Nginx[m[3;16H[K[4;1Hsudo dnf install [35m-y[m nginx
+
+[34m# Start and Enable Nginx[m
+sudo systemctl [38;5;130menable[m [35m--now[m nginx
+
+[34m# Enable Firewalld[m
+sudo firewalld-cmd [35m--permanent[m [35m--add-service[m[38;5;130m=[mhttp
+
+[34m# Check Ngiinx status[m
+systemctl [38;5;130mstatus[m nginx [35m--no-pager[m
+systemctl [38;5;130mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H16,0-1[8CAll[16;1H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[25;107He[16;1H[25;108H1[16;1H[25;109He[16;1H[25;110H/[16;1H[25;111H1[16;1H[25;112He[16;1H[25;113H1[16;1H[25;114He[16;1H[25;115H/[16;1H[25;116H1[16;1H[25;107H          [16;1H[27m[23m[29m[m[H[2J[1;1H[96m#!/bin/bash
+
+# Install Nginx[m
+sudo dnf install [38;5;224m-y[m nginx
+
+[96m# Start and Enable Nginx[m
+sudo systemctl [93menable[m [38;5;224m--now[m nginx
+
+[96m# Enable Firewalld[m
+sudo firewalld-cmd [38;5;224m--permanent[m [38;5;224m--add-service[m[93m=[mhttp
+
+[96m# Check Ngiinx status[m
+systemctl [93mstatus[m nginx [38;5;224m--no-pager[m
+systemctl [93mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H16,0-1[8CAll"nginx_install.sh" 16L, 267B[16;1H[?25h[?25l[25;107H~@k[16;1H[25;107H   [15;1H[25;118H5[15;1H[?25h[?25l[25;107H~@k[15;1H[25;107H   [14;1H[25;118H4,1  [14;1H[?25h[?25l[25;107H~@k[14;1H[25;107H   [13;1H[25;118H3[13;1H[?25h[?25l[25;107H~@k[13;1H[25;107H   [12;1H[25;118H2[12;1H[?25h[?25l[25;107H~@k[12;1H[25;107H   [11;1H[25;118H1,0-1[11;1H[?25h[?25l[25;107Hs[11;1H[25;107H [11;1H[25;107Hcl[11;1H[25;107H  [11;1H[25;1H[1m-- INSERT --[m[25;13H[K[25;117H11,1[10CAll[11;1H[?25h[?25lu[25;120H2[11;2H[?25h[?25l[11;1H[K[25;120H1[11;1H[?25h[?25ls[25;120H2[11;2H[?25h[?25lu[25;120H3[11;3H[?25h[?25ld[25;120H4[11;4H[?25h[?25lo[25;120H5[11;5H[?25h[?25l[25;120H6[11;6H[?25h[?25lf[25;120H7[11;7H[?25h[?25lo[25;120H8[11;8H[?25h[?25l[93mfor[m[25;120H9[11;9H[?25h[?25lfo[11;8H[K[25;120H8[11;8H[?25h[?25l[11;7H[K[25;120H7[11;7H[?25h[?25l[97m[101mfi[m[25;120H8[11;8H[?25h[?25lfir[25;120H9[11;9H[?25h[?25le[25;120H10[11;10H[?25h[?25lw[25;121H1[11;11H[?25h[?25la[25;121H2[11;12H[?25h[?25ll[25;121H3[11;13H[?25h[?25ll[25;121H4[11;14H[?25h[?25l-[25;121H5[11;15H[?25h[?25lc[25;121H6[11;16H[?25h[?25lm[25;121H7[11;17H[?25h[?25ld[25;121H8[11;18H[?25h[?25l[25;121H9[11;19H[?25h[?25l-[25;120H20[11;20H[?25h[?25l[38;5;224m--[m[25;121H1[11;21H[?25h[?25l[38;5;224mr[m[25;121H2[11;22H[?25h[?25l[38;5;224me[m[25;121H3[11;23H[?25h[?25l[38;5;224ml[m[25;121H4[11;24H[?25h[?25l[38;5;224mo[m[25;121H5[11;25H[?25h[?25l[25;121H6-33[11;33H[?25h[?25l[25;121H5   [11;25H[?25h[?25l[38;5;224ma[m[25;121H6[11;26H[?25h[?25l[38;5;224md[m[25;121H7[11;27H[?25h[25;1H[K[11;26H[?25l[25;107H^[[11;26H[25;107H  [11;27H[25;117H11,26[9CAll[11;26H[?25h[?25l[25;107H:[11;26H[25;107H[K[25;1H:[?25hwq[?25l[?2004l[>4;m"nginx_install.sh" 16L, 293B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim nginx_install.sh sudo firewall-cmd --list-all[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cystemctl status nginx.service [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13P./nginx_install.shcat nginx_install.sh [3P./nginx_install.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Last metadata expiration check: 1:06:03 ago on Fri 07 Aug 2026 10:59:11 PM CST.
+Package nginx-2:1.26.3-12.el10.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+sudo: firewalld-cmd: command not found
+success
+[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 30min ago
+ Invocation: 0700dd8875f244139da91e9cacbac080
+   Main PID: 10780 (nginx)
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m
+     Memory: 3M (peak: 3M)
+        CPU: 57ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m
+
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+[?1h=[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server[m
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)[m]8;;\
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 30min ago[m
+ Invocation: 0700dd8875f244139da91e9cacbac080[m
+   Main PID: 10780 (nginx)[m
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m[m
+     Memory: 3M (peak: 3M)[m
+        CPU: 57ms[m
+     CGroup: /system.slice/nginx.service[m
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m[m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m[m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m[m
+[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.[m
+[K[?1l>]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\./nginx_install.shvim nginx_install.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_install.sh" 16L, 293B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[34m# Install Nginx[m[3;16H[K[4;1Hsudo dnf install [35m-y[m nginx
+
+[34m# Start and Enable Nginx[m
+sudo systemctl [38;5;130menable[m [35m--now[m nginx
+
+[34m# Enable Firewalld[m
+sudo firewalld-cmd [35m--permanent[m [35m--add-service[m[38;5;130m=[mhttp
+sudo firewall-cmd [35m--reload[m
+[34m# Check Ngiinx status[m
+systemctl [38;5;130mstatus[m nginx [35m--no-pager[m
+systemctl [38;5;130mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H11,26[9CAll[11;26H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[25;107He[11;26H[25;108H1[11;26H[25;109He[11;26H[25;110H/[11;26H[25;111H1[11;26H[25;112He[11;26H[25;113H1[11;26H[25;114He[11;26H[25;115H/[11;26H[25;116H1[11;26H[25;107H          [11;26H[27m[23m[29m[m[H[2J[1;1H[96m#!/bin/bash
+
+# Install Nginx[m
+sudo dnf install [38;5;224m-y[m nginx
+
+[96m# Start and Enable Nginx[m
+sudo systemctl [93menable[m [38;5;224m--now[m nginx
+
+[96m# Enable Firewalld[m
+sudo firewalld-cmd [38;5;224m--permanent[m [38;5;224m--add-service[m[93m=[mhttp
+sudo firewall-cmd [38;5;224m--reload[m
+[96m# Check Ngiinx status[m
+systemctl [93mstatus[m nginx [38;5;224m--no-pager[m
+systemctl [93mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H11,26[9CAll"nginx_install.sh" 16L, 293B[11;26H[?25h[?25l[25;107H~@k[11;26H[25;107H   [11;25H[25;121H5[11;25H[?25h[?25l[25;107H~@k[11;25H[25;107H   [11;24H[25;121H4[11;24H[?25h[?25l[25;107H~@k[11;24H[25;107H   [11;23H[25;121H3[11;23H[?25h[?25l[25;107H~@k[11;23H[25;107H   [11;22H[25;121H2[11;22H[?25h[?25l[25;107H~@k[11;22H[25;107H   [11;21H[25;121H1[11;21H[?25h[?25l[25;107H~@k[11;21H[25;107H   [11;20H[25;121H0[11;20H[?25h[?25l[25;107H~@k[11;20H[25;107H   [11;19H[25;120H19[11;19H[?25h[?25l[25;107H~@k[11;19H[25;107H   [11;18H[25;121H8[11;18H[?25h[?25l[25;107H~@k[11;18H[25;107H   [11;17H[25;121H7[11;17H[?25h[?25l[25;107H~@k[11;17H[25;107H   [11;16H[25;121H6[11;16H[?25h[?25l[25;107H~@k[11;16H[25;107H   [10;16H[25;118H0[10;16H[?25h[?25l[25;107H~@k[10;16H[25;107H   [10;15H[25;121H5[10;15H[?25h[?25l[25;107H~@k[10;15H[25;107H   [10;14H[25;121H4[10;14H[?25h[?25l[25;107H~@k[10;14H[25;107H   [10;15H[25;121H5[10;15H[?25h[?25l[25;107H~@k[10;15H[25;107H   [10;15H[25;1H[1m-- INSERT --[m[25;13H[K[25;117H10,15[9CAll[10;15H[?25h[?25l-cmd [38;5;224m--permanent[m [38;5;224m--add-service[m[93m=[mhttp[10;49H[K[25;121H4[10;14H[?25h[25;1H[K[10;13H[?25l[25;107H^[[10;13H[25;107H  [10;14H[25;117H10,13[9CAll[10;13H[?25h[?25l[25;107H:[10;13H[25;107H[K[25;1H:[?25hwq[?25l[?2004l[>4;m"nginx_install.sh" 16L, 292B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim nginx_install.sh [3P./nginx_install.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Last metadata expiration check: 1:06:44 ago on Fri 07 Aug 2026 10:59:11 PM CST.
+Package nginx-2:1.26.3-12.el10.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+success
+success
+[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 31min ago
+ Invocation: 0700dd8875f244139da91e9cacbac080
+   Main PID: 10780 (nginx)
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m
+     Memory: 3M (peak: 3M)
+        CPU: 57ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m
+
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+[?1h=[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server[m
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)[m]8;;\
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 31min ago[m
+ Invocation: 0700dd8875f244139da91e9cacbac080[m
+   Main PID: 10780 (nginx)[m
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m[m
+     Memory: 3M (peak: 3M)[m
+        CPU: 57ms[m
+     CGroup: /system.slice/nginx.service[m
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m[m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m[m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m[m
+[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.[m
+[K[?1l>]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\fi[K[Ks[K./nginx_install.shvim nginx_install.sh 
+[?2004l]133;C\]666;vte.shell.preexec!\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;25r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[25;1H"nginx_install.sh" 16L, 292B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m#!/bin/bash[m[2;1H[K[3;1H[34m# Install Nginx[m[3;16H[K[4;1Hsudo dnf install [35m-y[m nginx
+
+[34m# Start and Enable Nginx[m
+sudo systemctl [38;5;130menable[m [35m--now[m nginx
+
+[34m# Enable Firewalld[m
+sudo firewall-cmd [35m--permanent[m [35m--add-service[m[38;5;130m=[mhttp
+sudo firewall-cmd [35m--reload[m
+[34m# Check Ngiinx status[m
+systemctl [38;5;130mstatus[m nginx [35m--no-pager[m
+systemctl [38;5;130mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H10,13[9CAll[10;13H[?25h[?4mP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[25;107H:[10;13H[25;108H1[10;13H[25;109He[10;13H[25;110H1[10;13H[25;111He[10;13H[25;112H/[10;13H[25;113H1[10;13H[25;114He[10;13H[25;115H1[10;13H[25;116He[10;13H[25;107H          [10;13H[27m[23m[29m[m[H[2J[1;1H[96m#!/bin/bash
+
+# Install Nginx[m
+sudo dnf install [38;5;224m-y[m nginx
+
+[96m# Start and Enable Nginx[m
+sudo systemctl [93menable[m [38;5;224m--now[m nginx
+
+[96m# Enable Firewalld[m
+sudo firewall-cmd [38;5;224m--permanent[m [38;5;224m--add-service[m[93m=[mhttp
+sudo firewall-cmd [38;5;224m--reload[m
+[96m# Check Ngiinx status[m
+systemctl [93mstatus[m nginx [38;5;224m--no-pager[m
+systemctl [93mstatus[m nginx
+
+
+[94m~                                                                                                                                     [18;1H~                                                                                                                                     [19;1H~                                                                                                                                     [20;1H~                                                                                                                                     [21;1H~                                                                                                                                     [22;1H~                                                                                                                                     [23;1H~                                                                                                                                     [24;1H~                                                                                                                                     [m[25;117H10,13[9CAll"nginx_install.sh" 16L, 292B[10;13H[?25h[?25l[25;107H~@k[10;13H[25;107H   [11;13H[25;118H1[11;13H[?25h[?25l[25;107H~@k[11;13H[25;107H   [11;14H[25;121H4[11;14H[?25h[?25l[25;107H~@k[11;14H[25;107H   [11;15H[25;121H5[11;15H[?25h[?25l[25;107H~@k[11;15H[25;107H   [11;16H[25;121H6[11;16H[?25h[?25l[25;107H~@k[11;16H[25;107H   [11;17H[25;121H7[11;17H[?25h[?25l[25;107H~@k[11;17H[25;107H   [11;18H[25;121H8[11;18H[?25h[?25l[25;107H~@k[11;18H[25;107H   [11;19H[25;121H9[11;19H[?25h[?25l[25;107H~@k[11;19H[25;107H   [11;20H[25;120H20[11;20H[?25h[?25l[25;107H~@k[11;20H[25;107H   [11;21H[25;121H1[11;21H[?25h[?25l[25;107H~@k[11;21H[25;107H   [11;22H[25;121H2[11;22H[?25h[?25l[25;107H~@k[11;22H[25;107H   [11;23H[25;121H3[11;23H[?25h[?25l[25;107H~@k[11;23H[25;107H   [11;24H[25;121H4[11;24H[?25h[?25l[25;107H~@k[11;24H[25;107H   [11;25H[25;121H5[11;25H[?25h[?25l[25;107H~@k[11;25H[25;107H   [11;26H[25;121H6[11;26H[?25h[?25l[25;107H~@k[11;26H[25;107H   [11;26H[?25h[?25l[25;107H~@k[11;26H[25;107H   [11;26H[?25h[?25l[25;107H~@k[11;26H[25;107H   [11;26H[?25h[?25l[25;107H~@k[11;26H[25;107H   [11;26H[?25h[?25l[25;107H~@k[11;26H[25;107H   [12;21H[25;118H2,21[12;21H[?25h[?25l[25;107H~@k[12;21H[25;107H   [13;26H[25;118H3,26[13;26H[?25h[?25l[25;107H~@k[13;26H[25;107H   [14;22H[25;118H4,22[14;22H[?25h[?25l[25;107H~@k[14;22H[25;107H   [14;22H[25;1H[1m-- INSERT --[m[25;13H[K[25;117H14,22[9CAll[14;22H[?25h[?25l[25;121H3[14;23H[?25h[?25l[15;24r[15;1H[L[1;25r[25;117H[K[25;117H15,1[10CAll[15;1H[?25h[?25lf[25;120H2[15;2H[?25h[?25l[97m[101mfi[m[25;120H3[15;3H[?25h[?25lfir[25;120H4[15;4H[?25h[?25l[97m[101mfi[m[15;3H[K[25;120H3[15;3H[?25h[?25lf[15;2H[K[25;120H2[15;2H[?25h[?25l[15;1H[K[25;120H1[15;1H[?25h[?25ls[25;120H2[15;2H[?25h[?25lu[25;120H3[15;3H[?25h[?25ld[25;120H4[15;4H[?25h[?25lo[25;120H5[15;5H[?25h[?25l[25;120H6[15;6H[?25h[?25lf[25;120H7[15;7H[?25h[?25l[97m[101mfi[m[25;120H8[15;8H[?25h[?25lfir[25;120H9[15;9H[?25h[?25le[25;120H10[15;10H[?25h[?25lw[25;121H1[15;11H[?25h[?25la[25;121H2[15;12H[?25h[?25ll[25;121H3[15;13H[?25h[?25ll[25;121H4[15;14H[?25h[?25l[25;121H5[15;15H[?25h[?25l[25;121H4[15;14H[?25h[?25l-[25;121H5[15;15H[?25h[?25lc[25;121H6[15;16H[?25h[?25lm[25;121H7[15;17H[?25h[?25ld[25;121H8[15;18H[?25h[?25l[25;121H9[15;19H[?25h[?25l-[25;120H20[15;20H[?25h[?25l[38;5;224m--[m[25;121H1[15;21H[?25h[?25l[38;5;224ml[m[25;121H2[15;22H[?25h[?25l[38;5;224mi[m[25;121H3[15;23H[?25h[?25l[38;5;224ms[m[25;121H4[15;24H[?25h[?25l[38;5;224mt[m[25;121H5[15;25H[?25h[?25l[38;5;224m-[m[25;121H6[15;26H[?25h[?25l[38;5;224ma[m[25;121H7[15;27H[?25h[?25l[38;5;224ml[m[25;121H8[15;28H[?25h[?25l[38;5;224ml[m[25;121H9[15;29H[?25h[?25l[38;5;224ml[m[25;120H30[15;30H[?25h[?25l[15;29H[K[25;120H29[15;29H[?25h[25;1H[K[15;28H[?25l[25;107H^[[15;28H[25;107H  [15;29H[25;117H15,28[9CAll[15;28H[?25h[?25l[25;107H:[15;28H[25;107H[K[25;1H:[?25hwq[?25l[?2004l[>4;m"nginx_install.sh" 17L, 321B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\vim nginx_install.sh [3P./nginx_install.sh
+[?2004l]133;C\]666;vte.shell.preexec!\Last metadata expiration check: 1:07:27 ago on Fri 07 Aug 2026 10:59:11 PM CST.
+Package nginx-2:1.26.3-12.el10.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[91mWarning: ALREADY_ENABLED: http[00m
+success
+success
+[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 32min ago
+ Invocation: 0700dd8875f244139da91e9cacbac080
+   Main PID: 10780 (nginx)
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m
+     Memory: 3M (peak: 3M)
+        CPU: 57ms
+     CGroup: /system.slice/nginx.service
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m
+
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+[?1h=[0;1;32m●[0m nginx.service - The nginx HTTP and reverse proxy server[m
+     Loaded: loaded (]8;;file://localhost.localdomain/usr/lib/systemd/system/nginx.service\/usr/lib/systemd/system/nginx.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)[m]8;;\
+     Active: [0;1;32mactive (running)[0m since Fri 2026-08-07 23:34:22 CST; 32min ago[m
+ Invocation: 0700dd8875f244139da91e9cacbac080[m
+   Main PID: 10780 (nginx)[m
+      Tasks: 3[0;38;5;245m (limit: 10865)[0m[m
+     Memory: 3M (peak: 3M)[m
+        CPU: 57ms[m
+     CGroup: /system.slice/nginx.service[m
+             ├─[0;38;5;245m10780 "nginx: master process /usr/sbin/nginx"[0m[m
+             ├─[0;38;5;245m10781 "nginx: worker process"[0m[m
+             └─[0;38;5;245m10782 "nginx: worker process"[0m[m
+[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok[m
+Aug 07 23:34:22 localhost.localdomain nginx[10776]: nginx: configuration file /etc/nginx/nginx.conf test is successful[m
+Aug 07 23:34:22 localhost.localdomain systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.[m
+[K[?1l>public (default, active)
+  target: default
+  ingress-priority: 0
+  egress-priority: 0
+  icmp-block-inversion: no
+  interfaces: ens33
+  sources: 
+  services: cockpit dhcpv6-client http ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+]0;tim@localhost:~/shell]666;vte.shell.postexec=0\]666;vte.shell.precmd!\]7;file://localhost/home/tim/shell\[?2004h]133;D;0\]133;A\[32mtim@localhost[0m:[32m~/shell[0m$[0m ]133;B\exit
+[?2004l]133;C\]666;vte.shell.preexec!\exit
+
+Script done on 2026-08-08 00:06:56+08:00 [COMMAND_EXIT_CODE="0"]
